@@ -1,0 +1,12 @@
+version: '3'
+services:
+  dockerapp:
+    build: .
+    ports:
+      - "8000:3000"
+    depends_on:
+      - redis
+
+  redis:
+    image: redis:latest
+
